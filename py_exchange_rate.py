@@ -3,6 +3,9 @@ import logging
 import configparser
 from datetime import date, datetime
 
+restapi_url = "https://api.exchangerate-api.com/v4/latest/"
+
+
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -37,8 +40,9 @@ class InvalidDate(Error):
 
 
 def load_config():
-    config.read('./config.ini')
-    return config['DEFAULT']['restapi_url']
+    # config.read('./config.ini')
+    # return config['DEFAULT']['restapi_url']
+    return restapi_url
 
 def consume_api(base ):
     url = load_config()
@@ -91,5 +95,5 @@ def convert(base='USD', date_text=date.today(), amount=1, to=[]):
 
 
 # convert(base='USD', amount=1, to=['SGD', 'EUR'])
-convert(amount=1, to=['SGD', 'EUR'])
+# convert(amount=1, to=['SGD', 'EUR'])
 
