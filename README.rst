@@ -1,4 +1,4 @@
-.. image:: ./images/currency_converter_logo.jpeg
+.. image:: ./currency_converter_logo.jpeg
 
 
 This is a currency converter that uses https://www.exchangerate-api.com/ API.
