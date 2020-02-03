@@ -83,17 +83,23 @@ def convert(base='USD', date_text=date.today(), amount=1, to=[]):
 
             if to == []: to = country_codes
             output=dict(zip(to,[*map(lambda country_code:amount*rates[country_code], to)]))
-            print(output)
+            # print(output)
+            return output
 
         pass
     except UnsupportedCountryCode as error:
-        print(error.param + ':: ' + str(error.payload) + " is not supported ")
+        # print(error.param + ':: ' + str(error.payload) + " is not supported ")
+        return str(error.param) + ':: ' + str(error.payload) + " is not supported "
     except InvalidAmount as error:
-        print("amount ::" + str(error.payload) + " is not supported ")
+        # print("amount ::" + str(error.payload) + " is not supported ")
+        return "amount ::" + str(error.payload) + " is not supported "
     except InvalidDate as error:
-        print("date ::" + str(error.payload) + " is not supported. try YYYY-MM-DD format.")
+        # print("date ::" + str(error.payload) + " is not supported. try YYYY-MM-DD format.")
+        return "date ::" + str(error.payload) + " is not supported. try YYYY-MM-DD format."
+
 
 
 # convert(base='USD', amount=1, to=['SGD', 'EUR'])
-# convert(amount=1, to=['SGD', 'EUR'])
-
+# rr= convert(amount=1, to=['SGD', 'EUR'])
+#
+# print(rr)
