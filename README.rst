@@ -1,4 +1,4 @@
-.. image:: ./currency_converter_logo.jpeg
+.. image:: https://raw.githubusercontent.com/catchmaurya/py_currency_converter/master/currency_converter_logo.jpeg
 
 
 This is a currency converter that uses https://www.exchangerate-api.com/ API.
@@ -73,7 +73,7 @@ MIT License
 
     |MIT license|
 
-    .. |MIT license| image:: https://img.shields.io/badge/License-MIT-blue.svg
+    .. image:: https://img.shields.io/badge/License-MIT-blue.svg
 
 
 Contact
